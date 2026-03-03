@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Vault Env Manager",
+  "version": "1.0.0",
+  "description": "Manage and export environment variables for Vault setup in JSON format",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

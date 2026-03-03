@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault Env Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Vault Env Manager</h1>
+    </header>
+
+    <div class="input-section">
+      <div class="paste-section">
+        <h3>Paste .env file content:</h3>
+        <textarea
+          id="envInput"
+          placeholder="Paste your .env file here...&#10;&#10;Example:&#10;DB_HOST=localhost&#10;DB_PORT=5432&#10;API_KEY=your-key"
+          class="textarea-field"
+        ></textarea>
+        <button id="parseBtn" class="btn btn-primary">Convert to JSON</button>
+      </div>
+    </div>
+
+    <div class="env-list" id="envList">
+      <!-- Environment variables will be listed here -->
+    </div>
+
+    <div class="actions">
+      <button id="exportBtn" class="btn btn-success">
+        <span class="icon">📋</span> Copy JSON
+      </button>
+      <button id="downloadBtn" class="btn btn-info">
+        <span class="icon">💾</span> Download .env
+      </button>
+      <button id="clearBtn" class="btn btn-danger">Clear All</button>
+    </div>
+
+    <div class="json-preview" id="jsonPreview">
+      <h3>JSON Preview</h3>
+      <pre id="jsonOutput">{}</pre>
+    </div>
+  </div>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
