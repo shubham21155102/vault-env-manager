@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="url(#grad1)"/>
+
+  <!-- Vault Body -->
+  <rect x="28" y="35" width="72" height="70" rx="8" fill="#ffffff" opacity="0.95"/>
+
+  <!-- Vault Door Lines -->
+  <line x1="64" y1="35" x2="64" y2="105" stroke="#667eea" stroke-width="2"/>
+
+  <!-- Lock/Keyhole -->
+  <circle cx="64" cy="62" r="12" fill="#667eea"/>
+  <rect x="58" y="62" width="12" height="16" fill="#667eea" rx="2"/>
+
+  <!-- Key Holes on vault door -->
+  <circle cx="48" cy="70" r="3" fill="#764ba2"/>
+  <circle cx="48" cy="82" r="3" fill="#764ba2"/>
+  <circle cx="80" cy="70" r="3" fill="#764ba2"/>
+  <circle cx="80" cy="82" r="3" fill="#764ba2"/>
+
+  <!-- Env Brackets -->
+  <text x="64" y="118" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">{ }</text>
+</svg>
