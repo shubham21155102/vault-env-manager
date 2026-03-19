@@ -12,6 +12,43 @@
       <h1>Vault Env Manager</h1>
     </header>
 
+    <div class="s3-section">
+      <button id="s3Toggle" class="btn btn-s3-toggle">
+        <span class="icon">☁️</span> Import from S3
+        <span id="s3Arrow" class="s3-arrow">▼</span>
+      </button>
+      <div id="s3Content" class="s3-content">
+        <div class="s3-form">
+          <div class="s3-field-row">
+            <div class="s3-field">
+              <label for="s3Region">AWS Region</label>
+              <input type="text" id="s3Region" class="input-field" placeholder="us-east-1">
+            </div>
+            <div class="s3-field">
+              <label for="s3Bucket">Bucket Name</label>
+              <input type="text" id="s3Bucket" class="input-field" placeholder="my-bucket">
+            </div>
+          </div>
+          <label for="s3Key">File Path (S3 Key)</label>
+          <input type="text" id="s3Key" class="input-field" placeholder="config/.env.production">
+          <div class="s3-field-row">
+            <div class="s3-field">
+              <label for="s3AccessKey">Access Key ID</label>
+              <input type="text" id="s3AccessKey" class="input-field" placeholder="AKIA...">
+            </div>
+            <div class="s3-field">
+              <label for="s3SecretKey">Secret Access Key</label>
+              <input type="password" id="s3SecretKey" class="input-field" placeholder="Secret key">
+            </div>
+          </div>
+          <button id="s3ImportBtn" class="btn btn-primary">
+            <span id="s3ImportText">Import from S3</span>
+            <span id="s3Spinner" class="spinner hidden"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="input-section">
       <div class="paste-section">
         <h3>Paste .env file content:</h3>
@@ -34,6 +71,10 @@
       </button>
       <button id="downloadBtn" class="btn btn-info">
         <span class="icon">💾</span> Download .env
+      </button>
+      <button id="pushS3Btn" class="btn btn-s3-push">
+        <span id="pushS3Text"><span class="icon">☁️</span> Push to S3</span>
+        <span id="pushS3Spinner" class="spinner hidden"></span>
       </button>
       <button id="clearBtn" class="btn btn-danger">Clear All</button>
     </div>

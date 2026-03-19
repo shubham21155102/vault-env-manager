@@ -27,6 +27,81 @@ header h1 {
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
+/* S3 Import Section */
+.s3-section {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.btn-s3-toggle {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border-radius: 12px;
+  position: relative;
+}
+
+.s3-arrow {
+  font-size: 12px;
+  transition: transform 0.3s;
+  margin-left: auto;
+}
+
+.s3-arrow.open {
+  transform: rotate(180deg);
+}
+
+.s3-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.s3-content.open {
+  max-height: 500px;
+}
+
+.s3-form {
+  padding: 15px;
+}
+
+.s3-form label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 4px;
+}
+
+.s3-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.s3-field {
+  min-width: 0;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.spinner.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .input-section {
   background: white;
   border-radius: 12px;
@@ -113,6 +188,11 @@ header h1 {
   color: white;
 }
 
+.btn-s3-push {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
 .btn-danger {
   background: #ef4444;
   color: white;
@@ -192,7 +272,7 @@ header h1 {
   margin-bottom: 15px;
 }
 
-.actions .btn:last-child {
+.actions .btn-danger {
   grid-column: 1 / -1;
 }
 
